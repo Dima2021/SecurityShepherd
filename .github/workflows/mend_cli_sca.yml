@@ -26,6 +26,6 @@ jobs:
     - name: 'Upload .mend/logs folder'
       uses: actions/upload-artifact@v2
       with:
-        name: Mend
+        name: Mend logs
         path: /home/runner/.mend/logs/
         retention-days: 1
