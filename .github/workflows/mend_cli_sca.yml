@@ -3,7 +3,7 @@ name: Mend Unified CLI
 on: workflow_dispatch
 
 jobs:
-  build:
+  mend:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -22,6 +22,4 @@ jobs:
       run: |
         sudo curl https://downloads.mend.io/production/unified/latest/linux_amd64/mend -o /usr/local/bin/mend && sudo chmod +x /usr/local/bin/mend
         echo Mend CLI downloaded successfully
-        java -jar wss-unified-agent.jar -appPath $WARFILE -d ./
         mend sca
-        
