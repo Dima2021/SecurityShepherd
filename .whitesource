@@ -3,6 +3,9 @@
   "issueSettings": {
     "issueType": "DEPENDENCY"
   },
+  "scanSettings": {
+    "enableSAST": "true"
+  },
   "remediateSettings": {
     "enableRenovate": true,
     "extends": [
