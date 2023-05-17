@@ -5,16 +5,5 @@
   },
   "scanSettings": {
     "enableSAST": "true"
-  },
-  "remediateSettings": {
-    "enableRenovate": true,
-    "extends": [
-      "github>whitesource/merge-confidence:beta",
-      "config:base",
-      "github>whitesource/log4j-remediations"
-      ],
-    "workflowRules": {
-      "enabled": true
-    }
   }
 }
