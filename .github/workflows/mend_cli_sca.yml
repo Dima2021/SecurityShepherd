@@ -19,13 +19,11 @@ jobs:
         MEND_EMAIL: ${{secrets.EMAIL}}
         MEND_USER_KEY: ${{secrets.USERKEY}}
         MEND_URL: https://saas.whitesourcesoftware.com
-        MEND_PRODUCTNAME: ${GITHUB_REPOSITORY_OWNER}
-        MEND_PROJECTNAME: ${{github.event.repository.name}}
       run: |
         sudo curl https://downloads.mend.io/production/unified/latest/linux_amd64/mend -o /usr/local/bin/mend && sudo chmod +x /usr/local/bin/mend
         echo Mend CLI downloaded successfully
-        echo Hierarchy: GH_${GITHUB_REPOSITORY_OWNER}//${{github.event.repository.name}}
-        mend sca -u -s "GH_${GITHUB_REPOSITORY_OWNER}//${{github.event.repository.name}}"
+        echo Hierarchy: ${GITHUB_REPOSITORY_OWNER}//"GH_${{github.event.repository.name}}
+        mend sca -u -s ${GITHUB_REPOSITORY_OWNER}//"GH_${{github.event.repository.name}}"
     - name: 'Upload .mend/logs folder'
       uses: actions/upload-artifact@v2
       with:
