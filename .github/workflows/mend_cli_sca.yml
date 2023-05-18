@@ -22,8 +22,8 @@ jobs:
       run: |
         sudo curl https://downloads.mend.io/production/unified/latest/linux_amd64/mend -o /usr/local/bin/mend && sudo chmod +x /usr/local/bin/mend
         echo Mend CLI downloaded successfully
-        echo Hierarchy: ${GITHUB_REPOSITORY_OWNER}//"GH_${{github.event.repository.name}}
-        mend sca -u -s ${GITHUB_REPOSITORY_OWNER}//"GH_${{github.event.repository.name}}"
+        echo Hierarchy: ${GITHUB_REPOSITORY_OWNER}//GH_${{github.event.repository.name}}
+        mend sca -u -s "${GITHUB_REPOSITORY_OWNER}//GH_${{github.event.repository.name}}"
     - name: 'Upload .mend/logs folder'
       uses: actions/upload-artifact@v2
       with:
