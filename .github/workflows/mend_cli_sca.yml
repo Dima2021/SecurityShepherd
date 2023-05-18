@@ -22,7 +22,7 @@ jobs:
       run: |
         sudo curl https://downloads.mend.io/production/unified/latest/linux_amd64/mend -o /usr/local/bin/mend && sudo chmod +x /usr/local/bin/mend
         echo Mend CLI downloaded successfully
-        mend sca -u
+        mend sca -u -s "Demo_Organization//Dima2021//GH_SecurityShepherd"
     - name: 'Upload .mend/logs folder'
       uses: actions/upload-artifact@v2
       with:
