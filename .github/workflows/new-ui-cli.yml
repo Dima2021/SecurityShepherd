@@ -11,7 +11,7 @@ jobs:
     - name: Mend CLI Scan
       env:
         #SAST
-        MEND_SAST_SERVER_URL: https://saas.whitesourcesoftware.com/app/
+        MEND_SAST_SERVER_URL: https://saas.whitesourcesoftware.com/app
         MEND_SAST_API_TOKEN: ${{secrets.MEND_SAST_API}}
         MEND_SAST_ORGANIZATION: ${{secrets.MEND_SAST_ORGANIZATION}}
       run: |
